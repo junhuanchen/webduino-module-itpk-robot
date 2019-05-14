@@ -1,0 +1,24 @@
+{
+  "types": [
+    "eim_broadcast",
+    "eim_message",
+    "eim_create",
+    "eim_listen",
+    "eim_info",
+    "dict_get"
+  ],
+  "category": "eim",
+  "scripts": [
+    "stringFormat.js",
+    "eim-blockly.js",
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "stringFormat.js",
+    "itpk.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

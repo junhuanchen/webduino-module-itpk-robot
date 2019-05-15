@@ -46,4 +46,30 @@ PS：这是一个纯粹 API 的积木接口，从这里我将阐述一下我设�
 
 ## 使用方法
 
-接下来说说这个积木的功能，如图
+进入 [ webduino blockly ](https://bit.webduino.com.cn/blockly/?lang=zh-hans)。
+
+![](readme/0.png)
+
+点击左下角的 菜单键（设置） 然后可以看到 使用自有积木。
+
+![](readme/1.png)
+
+在该框粘贴本文开头的插件地址并点击 汇入 即可。
+
+![](readme/2.png)
+
+汇入成功，再次点击 左下角的 × 返回主页吧。
+
+![](readme/3.png)
+
+此时你可以在主页上看到
+
+## 功能说明
+
+接下来说说这个积木的功能，如下图。
+
+## 文档介绍
+
+到这里来玩玩吧~
+
+[机器人 API ](http://www.itpk.cn/robot.php)

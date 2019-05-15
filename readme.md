@@ -65,7 +65,7 @@
 
 ![](readme/4.png)
 
-导入我的示例代码，需下载项目的 demos/blockly.xml 文件并导入。
+想要运行示例代码，需下载项目的 demos/blockly.xml 文件并导入。
 
 ## 功能说明
 

@@ -5,13 +5,6 @@
         <field name="TEXT">今天东莞天气如何？</field>
       </block>
     </value>
-    <statements name="question">
-      <block type="console">
-        <value name="console">
-          <block type="itpk_answer"></block>
-        </value>
-      </block>
-    </statements>
   </block>
   <block type="console">
     <value name="console">

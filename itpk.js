@@ -7,11 +7,20 @@
 }(function (scope) {
     'use strict';
   
-    var module = scope.module;
     const url = "https://i.itpk.cn/api.php";
     var answer = "";
 
-    module.RobotItpk.ask = function (question) {
+    function RobotItpk(eim_name) {
+        Module.call(this);
+        this.name = eim_name;
+        this.socket = io(`wss://${adapterHost}:12358` + "/test", {
+            transports: ["websocket"]
+        });
+
+        this.payload = this.topic = "";
+    }
+
+    RobotItpk.ask = function (question) {
         $.post(url, {
             'question': question
         }, function (respond) {
@@ -20,15 +29,15 @@
         });
     }
     
-    module.RobotItpk.clear = function () {
+    RobotItpk.clear = function () {
         answer = "";
     }
     
-    module.RobotItpk.answer = function () {
+    RobotItpk.answer = function () {
         return answer;
     }
 
-    module.RobotItpk.quick_ask = function (question, callback) {
+    RobotItpk.quick_ask = function (question, callback) {
         $.post(url, {
             'question': question
         }, function (respond) {
@@ -36,7 +45,9 @@
             callback();
         });
     }
-    
+
+    scope.module.RobotItpk = RobotItpk;
+
 }));
 
 function unit_test() {

@@ -1,16 +1,14 @@
 {
   "types": [
-    "eim_broadcast",
-    "eim_message",
-    "eim_create",
-    "eim_listen",
-    "eim_info",
-    "dict_get"
+    "itpk_robot",
+    "itpk_ask",
+    "itpk_clear",
+    "itpk_answer"
   ],
-  "category": "eim",
+  "category": "itpk",
   "scripts": [
     "stringFormat.js",
-    "eim-blockly.js",
+    "itpk-blockly.js",
     "blockly/blocks.js",
     "blockly/javascript.js"
   ],

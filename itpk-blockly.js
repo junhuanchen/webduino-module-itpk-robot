@@ -22,7 +22,7 @@
   }
 
   scope.itpk_quick_ask = function (question, callback) {
-    return "webduino.module.RobotItpk.quick_ask('{0}', function(){\n  {1}})".format(question, callback);
+    return "webduino.module.RobotItpk.quick_ask({0}, function(){\n  {1}})".format(question, callback);
   }
 
   scope.itpk_unit_test = function () {

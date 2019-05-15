@@ -7,11 +7,11 @@
 }(function (scope) {
     'use strict';
   
-    var Scope = scope.module.RobotItpk;
+    var module = scope.module;
     const url = "https://i.itpk.cn/api.php";
     var answer = "";
 
-    Scope.ask = function (question) {
+    module.RobotItpk.ask = function (question) {
         $.post(url, {
             'question': question
         }, function (respond) {
@@ -20,15 +20,15 @@
         });
     }
     
-    Scope.clear = function () {
+    module.RobotItpk.clear = function () {
         answer = "";
     }
     
-    Scope.answer = function () {
+    module.RobotItpk.answer = function () {
         return answer;
     }
 
-    Scope.quick_ask = function (question, callback) {
+    module.RobotItpk.quick_ask = function (question, callback) {
         $.post(url, {
             'question': question
         }, function (respond) {

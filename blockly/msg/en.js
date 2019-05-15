@@ -1,1 +1,1 @@
-MSG.catEim = 'Itpk Robot';
+MSG.catItpk = 'Itpk Robot';

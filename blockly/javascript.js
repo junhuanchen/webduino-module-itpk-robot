@@ -9,7 +9,7 @@ Blockly.JavaScript['itpk_ask'] = function(block) {
   var variable_itpk = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('itpk'), Blockly.Variables.NAME_TYPE);
   var value_question = Blockly.JavaScript.valueToCode(block, 'question', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = "{0}.itpk_ask({1});\n".format(variable_itpk, value_question);;
+  var code = "{0}.ask({1});\n".format(variable_itpk, value_question);;
   return code;
 };
 

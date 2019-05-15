@@ -34,14 +34,14 @@
     }
     
     RobotItpk.answer = function () {
-        return answer;
+        return answer.replace("[cqname]", "moli");;
     }
 
     RobotItpk.quick_ask = function (question, callback) {
         $.post(url, {
             'question': question
         }, function (respond) {
-            answer = respond;
+            answer = respond
             callback();
         });
     }

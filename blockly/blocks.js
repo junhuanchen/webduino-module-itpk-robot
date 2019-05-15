@@ -1,35 +1,7 @@
-Blockly.Blocks['itpk_robot'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("robot public");
-    this.setOutput(true, null);
-    this.setColour(315);
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
-
-Blockly.Blocks['itpk_ask'] = {
-  init: function() {
-    this.appendValueInput("question")
-        .setCheck("String")
-        .appendField("robot")
-        .appendField(new Blockly.FieldVariable("itpk"), "itpk")
-        .appendField("ask");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(315);
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
-
 Blockly.Blocks['itpk_clear'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("robot")
-        .appendField(new Blockly.FieldVariable("itpk"), "itpk")
-        .appendField("clear");
+        .appendField("clear itpk answer");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(315);
@@ -41,10 +13,23 @@ Blockly.Blocks['itpk_clear'] = {
 Blockly.Blocks['itpk_answer'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("robot")
-        .appendField(new Blockly.FieldVariable("itpk"), "itpk")
-        .appendField("answer");
+        .appendField("itpk answer");
     this.setOutput(true, null);
+    this.setColour(315);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['itpk_ask'] = {
+  init: function() {
+    this.appendValueInput("question")
+        .setCheck("String")
+        .appendField("ask itpk");
+    this.appendStatementInput("callback")
+        .setCheck(null);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
     this.setColour(315);
  this.setTooltip("");
  this.setHelpUrl("");

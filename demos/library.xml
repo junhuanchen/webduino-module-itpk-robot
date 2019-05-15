@@ -61,6 +61,15 @@
           <shadow type="type_null" id="YtgYTp:r(HyyN{OT-S$P"></shadow>
           <block type="type_string" id="*(XEV6CjicL[t+Pbv68{"></block>
         </value>
+        <next>
+          <block type="input_statement" id="jZjD}(Fc5xG%}06$-AIq">
+            <field name="INPUTNAME">callback</field>
+            <field name="ALIGN">LEFT</field>
+            <value name="TYPE">
+              <shadow type="type_null" id="CAWGHQl$(mb4]R^Pc,MX"></shadow>
+            </value>
+          </block>
+        </next>
       </block>
     </statement>
     <value name="TOOLTIP">
@@ -174,6 +183,57 @@
     </value>
     <value name="COLOUR">
       <block type="colour_hue" id="^ovbM+:5S@|aIP[AIY0D">
+        <mutation colour="#a55b93"></mutation>
+        <field name="HUE">315</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="Rl[ayx*R#aJkvYQOOxKE" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">itpk_quick_ask</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="Wd4_KFJ{;kXB(.ht7TTO">
+        <field name="INPUTNAME">question</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="%z!peYAF@kl|AnhcMZ[d">
+            <field name="TEXT">quick ask</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="YtgYTp:r(HyyN{OT-S$P"></shadow>
+          <block type="type_string" id="*(XEV6CjicL[t+Pbv68{"></block>
+        </value>
+        <next>
+          <block type="input_statement" id="^$Xha`*ctyJ8BO]bvV80">
+            <field name="INPUTNAME">callback</field>
+            <field name="ALIGN">LEFT</field>
+            <value name="TYPE">
+              <shadow type="type_null" id="xkAwTqdT/##v{=lPC*K)"></shadow>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="vT=0SMkyEa:iTmC|C.mB" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="JV^|xw*.w600ZfeKNM8V" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="WZ@,kCByPoksBQcyv,+`"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="mztr^/JJ7:FM+=!a1IfY"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="ZU45UvPOm.0CNXjDBthE">
         <mutation colour="#a55b93"></mutation>
         <field name="HUE">315</field>
       </block>

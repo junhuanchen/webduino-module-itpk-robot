@@ -1,9 +1,8 @@
 {
   "types": [
-    "itpk_robot",
     "itpk_ask",
-    "itpk_clear",
-    "itpk_answer"
+    "itpk_answer",
+    "itpk_clear"
   ],
   "category": "itpk",
   "scripts": [

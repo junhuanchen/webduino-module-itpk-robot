@@ -6,47 +6,47 @@
     }
 }(function (scope) {
     'use strict';
-
-    var proto;
-    var Module = scope.Module;
+  
+    var Scope = scope.module.RobotItpk;
+    const url = "https://i.itpk.cn/api.php";
     var answer = "";
 
-    function RobotItpk() {
-        Module.call(this);
-    }
-
-    RobotItpk.prototype = proto = Object.create(Module.prototype, {
-        constructor: {
-            value: RobotItpk
-        }
-    });
-
-    
-    proto.ask = function (question) {
-        $.post("https://i.itpk.cn/api.php", {
+    Scope.ask = function (question) {
+        $.post(url, {
             'question': question
-        }, function (data) {
-            console.log(data);
-            answer = data;
+        }, function (respond) {
+            // console.log(data);
+            answer = respond;
         });
     }
     
-    proto.clear = function () {
+    Scope.clear = function () {
         answer = "";
     }
-
-    proto.answer = function () {
+    
+    Scope.answer = function () {
         return answer;
     }
 
-    scope.module.RobotItpk = RobotItpk;
-
+    Scope.quick_ask = function (question, callback) {
+        $.post(url, {
+            'question': question
+        }, function (respond) {
+            answer = respond;
+            callback();
+        });
+    }
+    
 }));
 
 function unit_test() {
-  itpk = (new webduino.module.RobotItpk());
-  // console.log(itpk);
-  itpk.ask('东莞天气如何？');
+  webduino.module.RobotItpk.ask('东莞天气如何？');
+  setTimeout(function(){
+    console.log(webduino.module.RobotItpk.answer());
+    webduino.module.RobotItpk.ask('高雄天气如何？');
+    setTimeout("console.log(webduino.module.RobotItpk.answer())", 1000);
+  }, 1000);
+  
 }
 
 // unit_test();

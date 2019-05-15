@@ -1,3 +1,4 @@
+
 +(function (factory) {
   if (typeof exports === 'undefined') {
     factory(window, window.webduino);
@@ -8,20 +9,34 @@
 
   'use strict';
 
-  scope.itpk_create = function (itpk_name) {
-    return "new webduino.module.RobotItpk('{0}')".format(itpk_name);
+  scope.itpk_ask = function (question) {
+    return "webduino.module.RobotItpk.ask({0})".format(question);
   }
 
-  scope.itpk_ask = function (itpk_name, question) {
-    return "{0}.ask({1})".format(itpk_name, question);
+  scope.itpk_answer = function () {
+    return "webduino.module.RobotItpk.answer()";
   }
 
-  scope.itpk_answer = function (itpk_name) {
-    return "{0}.answer()".format(itpk_name);
+  scope.itpk_clear = function () {
+    return "webduino.module.RobotItpk.clear()";
   }
 
-  scope.itpk_clear = function (itpk_name) {
-    return "{0}.clear()".format(itpk_name);
+  scope.itpk_quick_ask = function (question, callback) {
+    return "webduino.module.RobotItpk.quick_ask('{0}', function(){\n  {1}})".format(question, callback);
+  }
+
+  scope.itpk_unit_test = function () {
+
+    var code = "";
+    
+    code += itpk_quick_ask('ip', 'console.log({0});\n'.format(itpk_answer()));
+    
+    console.log(code);
+    // eval(code);
+    return code;
   }
 
 }));
+
+// itpk_unit_test();
+

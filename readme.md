@@ -2,11 +2,10 @@
 
 本插件地址：`https://junhuanchen.github.io/webduino-module-itpk-robot/blockly.json`
 
-PS：这是一个纯粹 API 的积木接口，从这里我将阐述一下我设计的一些标准积木开头。
 
 ## 前言
 
-本人设计的积木满足以下格式 webduino-module-模块名，例如：webduino-module-itpk-robot。
+积木名称满足以下格式 webduino-module-模块名，例如：webduino-module-itpk-robot。
 
 积木插件结构：（根据 [eim 积木设计文档](https://github.com/junhuanchen/webduino-module-eim) 可知）
 

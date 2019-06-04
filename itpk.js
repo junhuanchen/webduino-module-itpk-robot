@@ -10,14 +10,8 @@
     const url = "https://i.itpk.cn/api.php";
     var answer = "";
 
-    function RobotItpk(eim_name) {
+    function RobotItpk() {
         Module.call(this);
-        this.name = eim_name;
-        this.socket = io(`wss://${adapterHost}:12358` + "/test", {
-            transports: ["websocket"]
-        });
-
-        this.payload = this.topic = "";
     }
 
     RobotItpk.ask = function (question) {
@@ -34,7 +28,7 @@
     }
     
     RobotItpk.answer = function () {
-        return answer.replace("[cqname]", "moli");;
+        return answer.replace("[cqname]", "moli");
     }
 
     RobotItpk.quick_ask = function (question, callback) {

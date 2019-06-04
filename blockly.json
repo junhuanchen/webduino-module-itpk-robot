@@ -6,13 +6,12 @@
   ],
   "category": "itpk",
   "scripts": [
-    "stringFormat.js",
+    "https://cdn.jsdelivr.net/gh/yarrem/stringFormat.js/format.js",
     "itpk-blockly.js",
     "blockly/blocks.js",
     "blockly/javascript.js"
   ],
   "dependencies": [
-    "stringFormat.js",
     "itpk.js"
   ],
   "msg": "blockly/msg",
